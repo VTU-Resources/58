@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BUILDORA — Single File App (Updated)</title>
+  <title>BUILDORA.ai</title>
 
   <!-- Google font: Poppins (clean, slightly condensed) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -153,33 +153,33 @@
       <div id="initialLoader" class="min-h-screen flex items-center justify-center">
         <div class="flex flex-col items-center space-y-3">
           <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none">
+            <svg xmlns="logo.png" class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none">
               <path d="M12 3l.94 2.365L15.5 6.5l-2.56 1.135L12 9.5l-.939-1.865L8.5 6.5l2.56-.135L12 3zM6 14l1.06 2.365L8.5 18.5l-2.56 1.135L6 21.5 5.061 19.635 2.5 18.5l2.56-1.135L6 14z" fill="currentColor"/>
             </svg>
           </div>
           <div class="text-center">
-            <div class="text-sm font-semibold">BUILDORA</div>
+            <div class="text-sm font-semibold">BUILDORA.ai</div>
             <div class="text-xs text-gray-500 dark:text-gray-400">Initializing…</div>
           </div>
         </div>
       </div>
 
-      <!-- AUTH VIEW -->
-      <main id="authView" class="hidden min-h-screen flex items-center justify-center p-4">
-        <div class="w-full max-w-md">
-          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-5 border border-gray-100 dark:border-gray-700">
-            <div class="text-center mb-4">
-              <div class="inline-flex items-center justify-center mb-2 gap-3">
-                <!-- inline logo -->
-                <div class="w-11 h-11 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center">
-                  <svg class="w-5 h-5 text-white" viewBox="0 0 24 24"><path d="M3 3l18 18" stroke="none" fill="currentColor"/></svg>
-                </div>
-                <div class="text-left">
-                  <div class="text-base font-semibold select-none">BUILDORA</div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400">Create your own brand APP / Website</div>
-                </div>
-              </div>
-            </div>
+     <!-- AUTH VIEW -->
+<main id="authView" class="hidden min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-md">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-5 border border-gray-100 dark:border-gray-700">
+      <div class="text-center mb-4">
+        <div class="inline-flex items-center justify-center mb-2 gap-3">
+          <!-- custom logo -->
+          <div class="w-11 h-11 rounded-full overflow-hidden bg-white">
+            <img src="logo.png" alt="BUILDORA logo" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-left">
+            <div class="text-base font-semibold select-none">BUILDORA</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Create your own brand APP / Website</div>
+          </div>
+        </div>
+      </div>
 
             <form id="authForm" class="space-y-3" novalidate>
               <div>
@@ -238,7 +238,7 @@
           <div class="bg-white dark:bg-gray-800 rounded-2xl card-shadow p-3 mb-5 border border-gray-100 dark:border-gray-700 header-wrap">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <img src="https://avatars.dicebear.com/api/initials/user.svg" alt="avatar" class="w-11 h-11 rounded-full" />
+                <img src="logo.png" alt="avatar" class="w-11 h-11 rounded-full" />
                 <div>
                   <div id="welcomeName" class="text-sm font-semibold text-gray-900 dark:text-white">Welcome, User!</div>
                   <div id="acctStatus" class="mt-1 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
@@ -270,7 +270,7 @@
             </div>
 
             <div id="heroPremium" class="hidden bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-4 text-white mb-4">
-              <h2 class="text-lg md:text-2xl font-bold mb-1">🎉 Premium Access Unlocked!</h2>
+              <h2 class="text-lg md:text-2xl font-bold mb-1">Premium Access Unlocked!</h2>
               <p class="text-xs md:text-sm opacity-90 mb-3">You now have full access to all features</p>
               <div class="flex items-center justify-center gap-2 hero-cta">
                 <button id="startBuildingBtn" class="bg-white text-green-600 px-4 py-1.5 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center gap-2 text-sm">
@@ -422,28 +422,28 @@
       const features = [
         {
           key: 'mobile',
-          img: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800&auto=format&fit=crop&cs=tinysrgb',
+          img: 'app.png',
           title: "Mobile App Builder",
           description: "Create stunning mobile applications with drag-and-drop interface",
           premium: true
         },
         {
           key: 'web',
-          img: 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=800&auto=format&fit=crop&cs=tinysrgb',
+          img: 'web.png',
           title: "Website Builder",
           description: "Build responsive websites with modern templates and components",
           premium: true
         },
         {
           key: 'branding',
-          img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop&cs=tinysrgb',
+          img: 'custombranding.png',
           title: "Custom Branding",
           description: "Add your own logo, colors, and branding to make it uniquely yours",
           premium: true
         },
         {
           key: 'templates',
-          img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop&cs=tinysrgb',
+          img: 'Premium Templates.png',
           title: "Premium Templates",
           description: "Access to 100+ professional templates and design components",
           premium: true
@@ -689,8 +689,8 @@
       function renderPaymentStep(state) {
         // small image links (icons8) used for ticks and payment icons for a more "real" look
         const TICK_IMG = 'https://img.icons8.com/fluency/48/000000/checked.png'; // green tick
-        const CARD_IMG = 'https://img.icons8.com/external-others-inmotus-design/67/000000/external-debit-card-online-payment-others-inmotus-design-2.png';
-        const SECURE_IMG = 'https://img.icons8.com/external-others-inmotus-design/64/000000/external-secure-check-security-others-inmotus-design.png';
+        const CARD_IMG = 'logo.png';
+        const SECURE_IMG = 'lock-icon.png';
 
         if (state.stage === 'main') {
           pmContent.innerHTML = `
